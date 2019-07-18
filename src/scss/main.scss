@@ -1,0 +1,43 @@
+@import "_normalize";
+@import "_variables";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #d9c1ff;
+}
+
+
+.icon {
+  color: #000;
+  margin-left: 40px;
+  margin-top: 70px;
+  width: 150px;
+  height: 22px;
+  position: relative;
+  border-radius: 7px;
+  border: solid 6px currentColor;
+  transform: rotate(-45deg);
+}
+
+.icon:before {
+  content: "";
+  left: -90px;
+  top: -5px;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  border-left: solid 40px transparent;
+  border-right: solid 40px currentColor;
+  border-top: solid 10px transparent;
+  border-bottom: solid 10px transparent;
+}
+
