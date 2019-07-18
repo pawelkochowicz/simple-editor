@@ -13,11 +13,34 @@ html {
 
 body {
   background: #d9c1ff;
+  font-family: 'Open Sans', sans-serif;
 }
 
+.form {
+  display: flex;
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+
+.form__text {
+  display: flex;
+margin: 10px 10px;  
+justify-content: end;
+}
+
+.header {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 6fr 2fr;
+}
 
 .icon {
   color: #000;
+  display: grid;
   margin-left: 40px;
   margin-top: 70px;
   width: 150px;
@@ -26,6 +49,8 @@ body {
   border-radius: 7px;
   border: solid 6px currentColor;
   transform: rotate(-45deg);
+  grid-column-start: 3;
+  grid-row-start: 1;
 }
 
 .icon:before {
@@ -41,3 +66,14 @@ body {
   border-bottom: solid 10px transparent;
 }
 
+.save {
+  grid-column-start: 2;
+  grid-row-start: 5;
+  margin: 2% 5% 2% 80%;
+}
+
+.load {
+  grid-column-start: 2;
+  grid-row-start: 5;
+  margin: 2% 25% 2% 60%;
+}
