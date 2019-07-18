@@ -13,8 +13,8 @@ html {
 }
 
 body {
-  background: rgb(125, 237, 209);
-  background: linear-gradient(34deg, rgba(125, 237, 209, 1) 19%, rgba(84, 151, 221, 1) 80%);
+  background: rgb(152, 152, 152);
+  background: linear-gradient(97deg, rgba(152, 152, 152, 1) 19%, rgba(45, 54, 107, 1) 80%);
   font-family: "Open Sans", sans-serif;
 }
 
@@ -23,29 +23,95 @@ body {
   grid-column-start: 2;
   grid-row-start: 4;
   &__text {
-    background-color: rgb(177, 182, 252);
+    background-color: rgb(118, 121, 161);
+    border-radius: 10px;
+    border: 1px solid black;
     display: flex;
     margin: 10px 10px;
     justify-content: end;
+    outline: none;
+  }
+  @media (max-width: 1000px) {
+    max-width: 800px;
+  }
+  @media (max-width: 750px) {
+    max-width: 550px;
+  }
+  @media (max-width: 580px) {
+    max-width: 320px;
   }
 }
 
 .footer {
+  align-content: center;
+  color: rgb(0, 0, 0);
   display: flex;
   grid-column-start: 2;
   grid-row-start: 6;
-  color: rgb(0, 153, 255);
   justify-content: center;
-  align-content: center;
 }
 
 .header {
   grid-column-start: 2;
   grid-row-start: 3;
-  margin-left: 30px;
   font-size: 44px;
+  margin-left: 30px;
   &__space {
     margin-left: 50px;
+  }
+}
+
+.icon {
+  border-radius: 7px;
+  border: solid 6px currentColor;
+  color: #000;
+  display: grid;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  height: 22px;
+  margin-left: 40px;
+  margin-top: 70px;
+  transform: rotate(-45deg);
+  width: 150px;
+  @media (max-width: 580px) {
+    display: none;
+  }
+}
+
+.icon:before {
+  content: "";
+  border-left: solid 40px transparent;
+  border-right: solid 40px currentColor;
+  border-top: solid 10px transparent;
+  border-bottom: solid 10px transparent;
+  height: 0px;
+  left: -90px;
+  position: relative;
+  top: -5px;
+  width: 0px;
+  @media (max-width: 580px) {
+    display: none;
+  }
+}
+
+.load {
+  background: rgb(152, 152, 152);
+  background: linear-gradient(273deg, rgba(152, 152, 152, 1) 19%, rgba(45, 54, 107, 1) 80%);
+  border: 2px solid black;
+  border-radius: 5px;
+  grid-column-start: 2;
+  grid-row-start: 5;
+  height: 38px;
+  margin: 2% 25% 2% 60%;
+  &:hover {
+    background: rgb(152, 152, 152);
+    background: linear-gradient(97deg, rgba(152, 152, 152, 1) 19%, rgba(45, 54, 107, 1) 80%);
+  }
+  &:active {
+    background: rgb(152, 152, 152);
+    background: linear-gradient(97deg, rgba(152, 152, 152, 1) 19%, rgba(45, 54, 107, 1) 80%);
+    box-shadow: 0 0 12px 0 #666;
+    transform: translateY(2px);
   }
 }
 
@@ -54,51 +120,23 @@ body {
   grid-template-columns: 1fr 6fr 2fr;
 }
 
-.icon {
-  color: #000;
-  display: grid;
-  margin-left: 40px;
-  margin-top: 70px;
-  width: 150px;
-  height: 22px;
-  border-radius: 7px;
-  border: solid 6px currentColor;
-  transform: rotate(-45deg);
-  grid-column-start: 3;
-  grid-row-start: 1;
-}
-
-.icon:before {
-  content: "";
-  left: -90px;
-  top: -5px;
-  width: 0px;
-  height: 0px;
-  position: relative;
-  border-left: solid 40px transparent;
-  border-right: solid 40px currentColor;
-  border-top: solid 10px transparent;
-  border-bottom: solid 10px transparent;
-}
-
 .save {
+  background: rgb(152, 152, 152);
+  background: linear-gradient(97deg, rgba(152, 152, 152, 1) 19%, rgba(45, 54, 107, 1) 80%);
+  border: 2px solid;
+  border-radius: 5px;
   grid-column-start: 2;
   grid-row-start: 5;
   height: 38px;
   margin: 2% 5% 2% 80%;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 19%, rgba(0, 125, 255, 0.4654236694677871) 80%);
-  border: 2px solid;
-  border-radius: 5px;
-}
-
-.load {
-  height: 38px;
-  grid-column-start: 2;
-  grid-row-start: 5;
-  margin: 2% 25% 2% 60%;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(267deg, rgba(255, 255, 255, 1) 19%, rgba(0, 125, 255, 0.4654236694677871) 80%);
-  border: 2px solid black;
-  border-radius: 5px;
+  &:hover {
+    background: rgb(152, 152, 152);
+    background: linear-gradient(273deg, rgba(152, 152, 152, 1) 19%, rgba(45, 54, 107, 1) 80%);
+  }
+  &:active {
+    background: rgb(152, 152, 152);
+    background: linear-gradient(273deg, rgba(152, 152, 152, 1) 19%, rgba(45, 54, 107, 1) 80%);
+    box-shadow: 0 0 12px 0 #666;
+    transform: translateY(2px);
+  }
 }
