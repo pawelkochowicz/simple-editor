@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap&subset=latin-ext");
 
 html {
   box-sizing: border-box;
@@ -12,25 +13,40 @@ html {
 }
 
 body {
-  background: #d9c1ff;
-  font-family: 'Open Sans', sans-serif;
+  background: rgb(125, 237, 209);
+  background: linear-gradient(34deg, rgba(125, 237, 209, 1) 19%, rgba(84, 151, 221, 1) 80%);
+  font-family: "Open Sans", sans-serif;
 }
 
 .form {
   display: flex;
   grid-column-start: 2;
   grid-row-start: 4;
+  &__text {
+    background-color: rgb(177, 182, 252);
+    display: flex;
+    margin: 10px 10px;
+    justify-content: end;
+  }
 }
 
-.form__text {
+.footer {
   display: flex;
-margin: 10px 10px;  
-justify-content: end;
+  grid-column-start: 2;
+  grid-row-start: 6;
+  color: rgb(0, 153, 255);
+  justify-content: center;
+  align-content: center;
 }
 
 .header {
   grid-column-start: 2;
   grid-row-start: 3;
+  margin-left: 30px;
+  font-size: 44px;
+  &__space {
+    margin-left: 50px;
+  }
 }
 
 .main {
@@ -45,7 +61,6 @@ justify-content: end;
   margin-top: 70px;
   width: 150px;
   height: 22px;
-  position: relative;
   border-radius: 7px;
   border: solid 6px currentColor;
   transform: rotate(-45deg);
@@ -69,11 +84,21 @@ justify-content: end;
 .save {
   grid-column-start: 2;
   grid-row-start: 5;
+  height: 38px;
   margin: 2% 5% 2% 80%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 19%, rgba(0, 125, 255, 0.4654236694677871) 80%);
+  border: 2px solid;
+  border-radius: 5px;
 }
 
 .load {
+  height: 38px;
   grid-column-start: 2;
   grid-row-start: 5;
   margin: 2% 25% 2% 60%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(267deg, rgba(255, 255, 255, 1) 19%, rgba(0, 125, 255, 0.4654236694677871) 80%);
+  border: 2px solid black;
+  border-radius: 5px;
 }
