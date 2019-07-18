@@ -1,9 +1,4 @@
-# wtf-gulp-starter
-
-`npm install -g gulp-cli`
-
-`npm install`
-
-`gulp`
-
-To publish your page using github pages use `npm run deploy`
+# Simple text editor
+Simple editor created for training basic JS functions. 
+He save message at localstorage after clicking "save" button,
+and give back this message after clicking "load" button.
